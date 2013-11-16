@@ -1,0 +1,18 @@
+Version.ST:UMN2BK0
+# Oct/09/2013 , ver 2BK0  tep Add new error code EC6C19/87C8.
+# Aug/20/2013 , ver 2BJ0  ekk Add EC7610 for TFA screening and release formal code
+# Aug/02/2013 , ver 2BH5  chg rename for shippable
+# Jul/02/2013 , ver 2BH0B ekk Pickup new testcase 19KPK for GOD5/GOD9 reduction
+# Jun/04/2013 , ver 2BH0  tep Add new error code EC630D/6315.
+# May/10/2013 , ver 2BG0  tep - Add new error code EC638A/8298.
+#                             - New binary for countermeasure edit file.
+# Feb/06/2013 , ver 2BF0  tep Add new error code EC876E.
+# Jan/22/2013 , ver 2BE0  tep Add new error code EC630A/630B/630C.
+# Jan/08/2013 , ver 2BD0  tep New trancation time for JGB.
+# Nov/06/2012 , ver 2BC0  tep Add new error code EC8296.
+# Oct/15/2012 , ver 2BB0  tep Rename to formal code.
+# Oct/08/2012 , ver 2BA0A tep Add new error code EC8925.
+# Oct/02/2012 , ver 2BA0  tep Add new error code EC6305, EC8924.
+# Sep/10/2012 , ver 2B90  tep Rename to formal code
+# Aug/02/2012 , ver 2B85A tep Add new error code EC8715
+

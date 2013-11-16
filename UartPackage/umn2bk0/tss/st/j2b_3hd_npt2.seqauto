@@ -1,0 +1,30 @@
+sequence(0x98);
+ initializeTemperatureBeforeTestStart(27,26,28);
+ saveInterval(0);
+ restart(0,0,0);
+ setVolt(0,500);
+ setTemp(34,1); holdMin(1020);
+
+ restart(0,0,0);
+ setTemp(60,1); holdMin(30);
+ save(27);
+  restart(4,1,0);
+  setVolt(0,500); holdMin(60);
+ loop();
+ setVolt(0,500); holdMin(30);
+ command(#PORTPREPDATA);holdMin(10);
+
+ label(#A);
+ command(#PORTLABELA);
+ restart(0,0,0);
+ setVolt(0,500);
+ setTemp(34,1); holdMin(30);
+
+ setTemp(34,1);
+ setVolt(0,0); holdMin(1);
+ command(#PORTFINALSTART);
+ setVolt(0,500); holdMin(464);
+ command(#PORTPREPDATA);holdMin(10);
+ setVolt(0,0);
+ holdMin(5);
+endSequence();
