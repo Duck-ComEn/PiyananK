@@ -1,0 +1,128 @@
+#=============================================================
+#
+#  MODEL TABLE FOR LTS-FX
+#
+#          IBM FUJISAWA
+#          Small Storage Products Test Engineering
+#
+#-------------------------------------------------------------
+#
+#  USAGE:  .ModelID : ModelName    (Class Name of Smalltalk)
+#        MT.ModelID : Machine Type (Machine Type)
+#
+#=============================================================
+# Jaguar-2
+# SJ Head
+.J6?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J6?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J6?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J6?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J6?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J6?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J6?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J6?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+# TDK Head
+.J7?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J7?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J7?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J7?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J7?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J7?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J7?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J7?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+# DP Head
+.J9?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J9?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J9?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J9?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J9?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.J9?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.J9?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.J9?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+
+# SJ Head
+.JE?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JE?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JE?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JE?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JE?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JE?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JE?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JE?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+# TDK Head
+.JF?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JF?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JF?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JF?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JF?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JF?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JF?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JF?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+# DP Head
+.JG?0??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?1??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?2??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JG?3??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JG?4??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JG?5??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JG?A??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?B??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?C??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?D??:c:\!lts\!system\!st\J2B_3HD.SEQ
+.JG?E??:c:\!lts\!system\!st\J2B_3HD.SEQ
+
+.JG?F??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?G??:c:\!lts\!system\!st\J2B_4HD.SEQ
+.JG?H??:c:\!lts\!system\!st\J2B_4HD.SEQ
+
+
+#CHKPGM
+.CHKUAT:c:\!lts\!system\!st\CHKUART.seq
+
+
