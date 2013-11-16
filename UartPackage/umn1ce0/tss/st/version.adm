@@ -1,0 +1,23 @@
+Version.ST:UMN1CE0
+# Sep/24/2013 , ver 1CE0  ekk - Remove NT 1hrs. and expand HT 1hrs. to original code
+# Sep/02/2013 , ver 1CD0  ekk - Add 829A TDP retry measurement
+# Aug/27/2013 , ver 1CC0  ekk - Rename to Formal Code.
+# Jul/10/2013 , ver 1CB5  tep - Add new error code EC874B:Head Asymmetry.
+# May/21/2013 , ver 1CB0  tep - New truncation time for odd/even ASAT.
+# Mar/14/2013 , ver 1CA0  tep - Add new STD ID for J1C TVxxxx.
+# Jan/25/2013 , ver 1C90  tep - Add new error code EC6374/80A0.
+# Jan/17/2013 , ver 1C80  tep - Add new error code EC6810/8526.
+# Jan/14/2013 , ver 1C70  tep - Add new error code EC7204/8660.
+# Nov/09/2012 , ver 1c60  tep - Rename to fopmal code.
+#                             - Add new binary code.
+# Nov/09/2012 , ver 1C50A tep - Change SW table path from st to etc foder.
+# Oct/31/2012 , ver 1C50  tep - Add new SW table.
+#                             - Change SW table path from etc to st folder.
+# Sep/10/2012 , ver 1C40  tep - Rename to formal code.
+# Aug/22/2012 , ver 1C30B tep - Add new error code EC6324
+# May/28/2012 , ver 1C30  ekk - Rename for formal code
+#                             - Change switching table path from st to etc folder
+# May/11/2012 , ver NJ20B ekk - Update Switching table rev.1.07
+# May/04/2012 , ver NJ20A ekk - Qualify binary for Automation
+#                             - update error code table same as Manual tester
+
