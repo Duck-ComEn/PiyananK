@@ -1,0 +1,347 @@
+#=============================================================================
+#
+#  SYSTEM PARAMETER DEFINITIONS FOR LTS-FX
+#
+#                                IBM FUJISAWA
+#                                Small Storage Products Test Engineering
+#
+#-----------------------------------------------------------------------------
+#
+#  USAGE: ProgramName.KeyWord : Parameter
+#                  or
+#         .KeyWord : Parameter     (Global definitions)
+#
+#============================================================================
+#
+# Files Version
+Version.ST:UR2C030
+# Nov/11/2013 , ver 2C030  pik Rename from URT2C02A to UR2C030 support EC7334
+# Oct/25/2013 , ver T2C02A pik Add new error code EC7334 : TA Screening fail
+# Aug/28/2013 , ver 2C020  tep Rename to formal code from URT2C01D.
+# Jul/31/2013 , ver T2C01D pik Support new error code EC871C/871D
+# Jun/11/2012 , ver 2C010  oom Rename from URT2C00F
+# May/18/2012 , ver T2C00F yka change SW table path(\!st -> \!etc\j6.txt)
+# Apr/26/2012 , ver T2C00E yka change test time(4HD model HT:25h -> 24h / 3HD model Fin NT:465 -> 350)
+# Mar/26/2012 , ver T2C00D yka Pick up new STDID:JExxxx/JFxxxx/JGxxxx
+# Mar/21/2012 , ver T2C00C yka Pickup EC:7610(TFA maesurement)
+# Mar/06/2012 , ver T2C00B oom Pickup libUart080a & Truncation time change
+# Nov/11/2011 , ver T2C00A yka support level URT2B00E
+# Aug/01/2011 , ver TST2CB yka support MT:JGB -> JGC
+# Jul/26/2011 , ver TST2CA yka Jagaur-2C initial support
+# Jun/30/2011 , ver TSTJ2K yka support switch of sequence(4HD/3HD)
+# Jun/20/2011 , ver TSTJ2G tad support depop Head (J4xxxx/J5xxxx)
+# Jun/16/2011 , ver TSTJ2H yka support depop Head(J8xFxx/J8xGxx/J8xHxx)
+# May/27/2011 , ver TSTJ2G yka pickup new PCPGM:M0230
+# May/13/2011 , ver TSTJ2F yka support STDID:J8xxxx
+# Apr/25/2011 , ver TSTJ2D yka SRST time criteria 70h -> 60h
+# Apr/22/2011 , ver TSTJ2C yka ramcode:libUart078t pickup
+# Apr/19/2011 , ver TSTJ2B yka problem fix for 2step swich.
+# Apr/14/2011 , ver TSTJ2A yka Jagaur-2 initial support
+# Apr/01/2011 , ver TSTJGA yka Jagaur-1B initial support
+# Mar/11/2011 , ver TS040 ekk Rename URTS03D to Formal Code.
+# Mar/09/2011 , ver TS03D oom GODR to EC5715/5910, pickup libUart078r
+# Feb/22/2011 , ver TS030 ars Formal 2Step code rename from urtst02b
+# FEb/15/2011 , ver TST02B oom EC:8270
+# Feb/09/2011 , ver TST02A yka Pickup PC Prg:M0210 & EC:8914/7100/6110
+# Feb/03/2011 , ver TS020 oom Formal 2step code
+# Jan/28/2011 , ver TS1B  yka update ramcode(libUArt078m). support EC:8180
+# Jan/22/2011 , ver TS1A  oom sw_table foler chenge from \st to \etc
+# Dec/21/2010 , ver TS0W  yka update PCPGM(M0200)
+# Dec/14/2010 , ver TS0V  yka update Seq , PCPGM(M0190) and V7 Cont F/W(V410)
+# Dec/10/2010 , ver TS0S  yka update ramcode(libUart078k).
+# Dec/09/2010 , ver TS0Q  yka update ramcode(libUart078j), change Error code 5910/5715 -> GODR
+# Dec/07/2010 , ver TS0P  yka support new error code table
+# Dec/01/2010 , ver TS0N  yka update SW table(e2.tbl/e3.tbl), update Error code Table.
+# Nov/16/2010 , ver TS0M  sim merge latest 3step code ( UR25R78D ) for adaptive
+# Nov/10/2010 , ver TS0J  Y.K update ramcode(libUart078h), update PCPGM(M170)
+# Nov/02/2010 , ver TS0K  Y.K problem fix for ec2pf.tbl
+# Oct/29/2010 , ver TS0J  Y.K update ramcode(libUart078g). update EC table, new PCPGM(M0150)
+# Oct/26/2010 , ver TS0H  Y.K update ramcode(libUart078f), update EC table, new PCPGM(M0143), support new STDID
+# Oct/22/2010 , ver TS0G  Y.K update ramcode(libUaet078e), EC:5710 spport
+# Oct/21/2010 , ver TS0B  T.O MultiCapa sw_table support
+# Oct/20/2010 , ver TS0A  T.O PC Prg M141 pick up
+# Oct/19/2010 , ver S00A  T.O 2Step Uart initial release
+# Sep/13/2010 , ver E780  E.C Rename UR25E77E to Formal Code.
+# Sep/08/2010 , ver E77E  E.C Support EC6550 seperation.
+#                             Comment next process at Model.tbl
+#                             Not support OPTI move to SRST
+# Sep/02/2010 , ver E77D  E.C Support OPTI move to SRST
+#                             Comment next process at Model.tbl
+# Jly/07/2010 , ver E770  T.O Rename from UR25E76B
+# Jun/09/2010 , ver E76B  Y.K Bad Head address 4A -> 48
+# May/20/2010 , ver E76A  Y.K support NT time with capacity
+# May/17/2010 , ver E75P  Y.K EC:6110 -> GODB
+# May/17/2010 , ver E75M  Y.K EC:6116 -> GODB
+# May/11/2010 , ver E75K  T.O update ramcode(libUart070p)
+# May/07/2010 , ver E75H  T.O MultiCapacity STDID support
+# Apr/13/2010 , ver E75D  Y.K update ramcode(libUart070m)
+# Apr/09/2010 , ver E75E  Y.K update ramcode(libUart070k)
+# Apr/08/2010 , ver E75D  Y.K NT time 1.5h -> 2h
+# Apr/01/2010 , ver E75C  Y.K update ramcode(libUart070j)
+# Mar/31/2010 , ver E75B  Y.K EGB7/EGC7 new STDID Int/SDK DK support
+# Mar/24/2010 , ver E75A  Y.K update ramcode(libUart070h)
+# Mar/19/2010 , ver E73C  Y.K update ramcode(libUart070g)
+# Mar/04/2010 , ver E73B  Y.k NT support(start - 15min -> NT / 15min - end -> HT)
+# Feb/11/2010 , ver E73A  Y.k HT support
+# Feb/04/2010 , ver E72D  Y.K update ramcode(libUart070f)
+# Jan/12/2010 , ver E72B  Y.K update PCPGM ver:M0111(MT mix support)
+# Jan/08/2010 , ver E72A  Y.K update ramcode(libUart070d), chenge test time 48h -> 20h
+# Dec/22/2009 , ver E71A  Y.K update ramcode(libUart070c).
+# Dec/15/2009 , ver E70Z  Y.K update ec2pf.tbl(from JPK). update ramcode(libUart070b)
+# Dec/14/2009 , ver E70Y  Y.K EC:9950 abort power off fix.
+# Dec/10/2009 , ver E70X  Y.K NT only support for EGB7 and EGC7.
+# Dec/08/2009 , ver 108X  Y.K New support EGB7 and EGC7.
+# Nov/26/2009 , ver 1080  E.C Extend FLB testtime 160GB 30minutes for GOD3 reduction.
+# Nov/16/2009 , ver 1075  E.C Support PTB new STDID for In-Drive SSW.
+# Oct/14/2009 , ver 1070  E.C 1.Seperate GOD9 to GOD7 (reporting timeout)
+#                               And GOD9 (Tester side error or other error)
+#                               And Make priority for transfer Rawdata to PC(CONT).
+#                               And add 5minute before POWER OFF.
+#                             2.Support clear reporting timeout request to SRST.
+#                             3.After report SRSTSEQ if couldn't get "COMP" command over 3min,
+#                               Change status = COMP at UART card and send PF code to PCPGM.
+#                             4.Change retry protocol for request to immidiate report flag error
+#                               by "PREPDATA" command.
+#                             5.GEOPARA report ordering.
+#                             6.Assign GOD3 when uart detect "PREPDATA" command STAT>HEADTABLE
+#                               but unable to communicate to drive.
+#                             7.After detecting PREPDATA assigned EC6110 or 6100(bug fix).
+# Sep/18/2009 , ver 1066  E.C pickup Extend NT time from ur25106a.
+# Sep/16/2009 , ver 1065  E.C Merge Apple,OEM,Hitachi Woo use same testtime
+#                             sequence file.
+# Aug/31/2009 , ver 1060  E.C Rename UR25105C to Formal Code.
+# Aug/26/2009 , ver 105C  E.C Support STDID SDK <PBL???, PBM???>
+# Aug/20/2009 , ver 1055  E.C 1.Support new STDID Woo/IVDR <PB??4?,PB??2?>
+#                             2.Pickup new PCPGM M0110.
+#                             3.Extend Testtime 160GB,320GB PTB normal for support Move SeqW final-> SRST.
+#                             4.New Error Code FTI/ATI from PTC.
+# Aug/04/2009 , ver 1050  E.C Rename UR25104E to formal Code
+# Jul/28/2009 , ver 104E  E.C 1.Support new STDID PB?J??<MT:PTBE>
+#                             2.Ignore cell shutdown from EC6110.
+# Jun/25/2009 , ver 1040  E.C 1.Pickup new truncation time for PTB(normal customer).
+# Jun/11/2009 , ver 1031  E.C 1.Merge PTB + 2.5" normal.
+#                             2.Ignore cell shutdown ec6550,ec6300,ec6200,ec6100.
+#                             3.1 Pickup ramcode.ptb for Special memory report for EC6131,
+#                             3.2 Pickup ramcode.ptb for support unload when tester abort.
+#                             4.Remove PTB J model from stmodel.v7u because not qualified yet.
+# May/11/2009 , ver 1030  P.J Rename UR25100Y to formal code.
+# Mar/30/2009 , ver 100Y  T.O Error cpde assign fix (FLC EC6130)
+# Mar/27/2009 , ver 100W  T.O Pick up new PC PRG M0090
+#                             Pick up new ramcode(brb/flb/flc/dpc/brk) for support power off signal from PC & Common package all 2.5" product
+#                             Pick up ramcode.brb for special report of resume para write fail
+#                             Add new truncate time FLB 250GB<3HD>,320GB
+# Oct/01/2008 , ver 9.90  P.B Add new truncate time BRB 60GB, DPC 100GB,200GB
+# Sep/18/2008 , ver 9.80  P.B Add stid FB?K?? for 4HD remodel to 250GB
+# Sep/02/2008 , ver 9.75  P.B Add stid BB?J?? for BRB 80GB Remodel
+# Aug/28/2008 , ver 9.70  P.B New truncate time for FLB
+# Jun/01/2008 , ver 9.60  P.B Add std id FB0G00 for Remodel 120G from 160G
+# Jun/14/2008 , ver 9.5A  E.C Re-trial for Skip 6300 and correct 6120 and 6130 and Countermeasure GOD3(FLB,BRK)
+# Jun/03/2008 , ver 9.50  E.C Rename from 9.4c for formal
+# May/23/2008 , ver 9.4C  E.C Skip 6300 and correct 6120 and 6130 and Countermeasure GOD3(FLB:Re-trial)
+# May/09/2008 , ver 9.4B  E.C Skip 6300 and correct 6120 and 6130 and Countermeasure GOD3(FLB,BRK).
+# Apr/23/2008 , ver 9.4A  E.C Skip 6300 and correct 6120 and 6130
+# Mar/19/2008 , ver 9.40  P.B Rename from 9.3J for formal
+# Mar/09/2008 , ver 9.3J  P.B Remove: item of ur25093g
+# Mar/06/2008 , ver 9.3H  P.B Add E/C 6505, 6556
+# Feb/19/2008 , ver 9.3G  P.B When tester time out if uart comm err fail 6110
+# Dec/13/2007 , ver 9.3E  Y.Enomoto reduce unimportant report for BRB & DPC
+# Nov/07/2007 , ver 9.30  New test time DPC
+# Oct/26/2007 , ver 9.20  New test time BRB
+# Jul/05/2007 , ver 9.10  K.Tsurumaru : Initial support DPC & BRB (Seq is same as UR25089M)
+# Jun/25/2007 , ver 9.00  T.Oomine : E/C6110 Operation (rename from UR25089C)
+# Jun/04/2007 , ver 8.9c  Y.enomoto: SRB for ERC 6110 + countermeasure hung up cont card by uart
+#                         Must be use new ec2pf.tbl <0006>
+# Apr/19/2007 , ver 8.90  T.Oomine : SRB Add IgnoreGOD5 (rename from UR25088B)
+
+# Apr/05/2007 , pick up pcpgm3.01 for SRB SATA problem : during report problem
+# Apr/03/2007 , pikc up pcpgm3.00 for SRB SATA problem : during report problem
+# Mar/15/2007 , ver 8.80  T.Oomine : SRB Add IgnoreGOD5 (rename from UR25087B)
+# Feb/15/2007 , ver 8.7B  Y.Shimofuji pick up PCPGM 2.99 for SRB SATA problem
+#                          Add IgnoreGOD5 for SB???? at model.tbl
+#  Test will be continued even if all drives are failed by GOD5.
+# Jan/24/2007 , ver 8.70  Pirat B. : MPB 100GB OEM MPB100IR.SEQ set 34 hrs.
+# Dec/18/2006 , ver 8.60   Wisit T.:MPB 1D model test time expansion (ec:6100 improve)
+#                                   MPB20IR.seq from 10:24 to 14:00
+#                                   MPB40IR.seq from 16:24 to 20:00
+# Nov/17/2006 , ver 8.50   Chalermpon P :Modify seq file(waiting time) MPC0.seq,MPC4.seq,MPC3.seq
+#                           FJ request add:new model for SRB 3HD 120GB.   [MahineType = SRB5(Upper Head), SRBE  (Down Head)]
+# Nov/07/2006 , ver 8.40   Pirat B.: Common seq file SRB120GB with SRB160GB, HKA100GB with HKA120GB
+# ---------------------------------> SRB is s120_160.seq HKA is h100_120.seq
+# Sep/06/2006 , ver 8.30   K. Tsurumaru: Support SRB 3HD 100GB (32.6h)
+# Aug/21/2006 , ver 8.20   Y. Furukawa:  Formal Code of ur25081X. Restore HKN/MPC seq same as ur250810.
+# Aug/08/2006 , ver 8.1X   Y. Furukawa: Merge SRB(ur2507SU) test time reduction for HKN/MPC
+# Jul/28/2006 , ver 8.1P   Y. Furukawa: Merge HKP
+# Jun/28/2006 , ver 8.10   I. Navanit: Add MPC SSW STD IDs
+# Jun/19/2006 , ver 8.00   B. Pirat: Pick up pc program 2.92 as formal
+# May/15/2006 , ver 7.90  T.Wisit : MPB time reduction (rename from UR25078A)
+# Apr/06/2006 , ver 7.8A  T.Wisit : MPB time reduction.
+# Apr/03/2006 , ver 7.80  T.Wisit : MPC time reduction with new STD IDs
+# Mar/28/2006 , ver 7.70  Y.Furu  : HKA  time reduction.
+# Mar/14/2006 , ver 7.6S  T.Wisit : Problem fixed Time reduction MPC
+# Mar/07/2006 , ver 7.6R  T.Wisit : Time reduction MPC
+# Feb/24/2006 , ver 7.60  Y.Furu  : Time reduction HKN
+# Feb/02/2006 , ver 7.5F  Y.Furu  : For Marge MPB Seq file
+# Jan/17/2006 , ver 7.50  K.Tsuru : Support NT SAT for HKA
+# Nov/16/2005 , ver 7.30  P.B     : Pick up pc program 2.89
+# Oct/27/2005 , ver 7.20  P.B     : Extend test time MRL 30GB to 24hrs
+# Sep/30/2005 , ver 7.10  K.Tsuru : Support Voltage control for MPB
+# Sep/14/2005 , ver 7.00  K.Tsuru : IrMn 40GB/P Test time reduction for MPB
+# Aug/29/2005 , ver 6.90  K.Tsuru : Support New STD-ID for Relax 4HD 60GB
+# Aug/05/2005 , ver 6.80  P.B     : Extend test time MRL 40,60,80GB Generic
+# Apr/12/2005 ' ver 6.70  K.Tsuru : Support Post SRST for HKA & MPC-SATA
+# Mar/28/2005 ' ver 6.50  T.Miya  : Support Post SRST for MPA
+# Mar/24/2005 ' ver 6.40  T.Miya   : Post SRST Time Reduction for MPB
+# Mar/15/2005 ' ver 6.30  M.Oga   : Post SRST Time Reduction
+# Jan/18/2005 ' ver 6.20  M.Ogawa : Support New STD-ID for MRG-C DELL
+# Jan/12/2005 ' ver 6.1A  K.Tsuru : Support New PC Program & MPC time change
+# Jan/11/2005 ' ver 6.10  K.Tsuru : Just rename from "ver 6.0A" for Formal
+# Dec/21/2004 ' ver 6.0A  T.Miya  : SRST time change for MPB
+# Dec/13/2004 ' ver 6.00  T.Miya  : SRST time change for MPA MPA1:9.5->7.5 MPA2:17->15
+# Nov/09/2004 ' ver 5.90  M.Oga   : Support TQI Post SRST for MRG-A/B/C IBM
+# Nov/02/2004 ' ver 5.80  M.Oga   : Support TQI Post SRST for MRG-A/C DELL
+# Oct/21/2004 ' ver 5.60  M.Oga   : Support TQI Post SRST for MRG-B DELL
+# Oct/12/2004 ' ver 5.50  K.Tsuru : Support +18h for MPB (Post SRST)
+# Sep/28/2004 ' ver 5.40  M.Oga   : Linux Support / New STD-ID for HP
+# Sep/15/2004 ' ver 5.30  M.Oga   : MRG New Model No Bad Head Problem Fix
+# Sep/10/2004 ' ver 5.20  K.Tsuru : Support MPC 50GB/P (STD-ID:MPC0xx, M/T:MPCD)
+# Aug/19/2004 ' ver 5.10  M.Oga   : Problem fix for affected STD-ID MRG-A IBM
+# Aug/17/2004 ' ver 5.00  M.Oga   : Support +12h for MRG-A/C HP  MRG-B/C IBM
+# Aug/10/2004 ' ver 4.90  M.Oga   : Support +12h for MRG-B HP
+# Jul/23/2004 ' ver 4.80  M.Oga   : Support +12h for MRG-B/C DELL
+# Jul/21/2004 ' ver 4.70  T.Miya  : Support MPC
+# Jul/16/2004 ' ver 4.60  M.Oga   : Support +24h for MRG-A IBM
+                                    Bad Head Problem Fix for MPB/MPC/HKN
+# Mar/30/2004 ' ver 4.40  S.Taka  : Support RAM code size over 128KB
+#                                   Support GEOParameter Report
+#                                   Support MPB TPI Information Report
+#                                   Support Special Sequence
+#                                   Support MPB Address Change
+#                                   Use Special Sequence for MPB (Don't use v7????.asc)
+#                                   Fix stmodel.v7u for MPB
+#                                   Add ramcode._dummy(libUartDummy004.tar.gz)
+#                                   Update VVU.PAC from UR250421
+#                                   Updata EFTS Code(CV7_029E.SUM/TM7_0112.SUM)
+#                                   Update ramcode.mrg/mrl/mrh/mpa/mpb(libUartMobile019.tar.gz)
+#                                   Update MPB?.SEQ
+# Mar/08/2004 ' ver 4.30  S.Taka  : Support POR recovery for GODx
+#                                   Support CUTOFF for 6100 drive (MRL2,MRL4,MRL60)
+#                                   Change ramcode.mrg/ramcode.mrl/ramcode.mrh from libUartMobile013.tar.gz
+#                                   Change v7__0535.asc -> v7__0537.asc
+#                                   Change VVU.PAC from UR250391
+# Feb/23/2004 ' ver 4.20  M.Oga   : Support New STD-ID for MRAxxx
+# Feb/19/2004 ' ver 4.10  T.Miya  : Reduce sequence file under 16KB
+# Feb/17/2004 ' ver 4.00  K.Tsuru : Support MPB (Initial)
+# Jan/23/2004 ' ver 3.90  T.Miya  : Support next process for MPA
+# Jan/20/2003 ' ver 3.80  M.Oga   : Support New STD-ID for Hitachi
+# Dec/16/2003 ' ver 3.70  S.Taka  : Rename Version Only.
+# Dec/10/2003 ' ver 3.62  S.Taka  : Support New E/C (6014/6015)
+#                                   Fix Rawdata Zero Fill Problem
+#                                   Change VVU.PAC / ec2pf.tbl / ramcode.mrg / ramcode.mrl / ramcode.mrh / ramcode.mpa
+# Dec/03/2003 ' ver 3.61  K.Tsuru : Change Test time of MPA (NT 20min/head)
+# Nov/25/2003 ' ver 3.60  M.Oga   : Support New STD-ID for MRG-A 30GB OEM-J
+# Nov/19/2003 ' ver 3.50  M.Oga   : Test Time Reduction for MRG MRL
+# Nov/13/2003 ' ver 3.40  M.Oga   : Support MRG-A 80 --> 60GB relax model STD-ID:MRGB??
+# Nov/06/2003 ' ver 3.31  S.Taka  : Change TPI offset / Fix rawdata zero fill problem
+#                                   Change ramcode.mpa(libUartMobile008.tar.gz)
+# Oct/30/2003 ' ver 3.30  M.Oga   : SRST Time Reduction for MRG2 MRG2-30GB
+# Oct/22/2003 ' ver 3.20  S.Nishi : Formal Release of UR25031C
+# Oct/02/2003 ' ver 3.1B  S.Nishi : Support MPA
+# Sep/26/2003 ' ver 3.1A  S.Nishi : Dup. DL Fix, 6190 Fix, TRT MBL SUPPORT, MPA SUPPORT (PCPGM:269)
+# Sep/26/2003 ' ver 3.10  S.Nishi : Formal Code of UR25030C
+# Sep/09/2003 ' ver 3.0C  S.Nishi : GOD9 Problem Fix (CONT:29A, PCPGM:268U)
+# Sep/02/2003 ' ver 3.0B  S.Nishi : LED Problem Fix (CONT:29A, PCPGM:266U)
+# Aug/28/2003 ' ver 3.0A  S.Nishi : GODL Problem Fix (CONT:29A, PCPGM:266U)
+# Aug/26/2003 ' ver 3.00  M.Ogawa : MRG-B relax + MRG-A/B down head
+# Jul/31/2003 ' ver 2.8D  K.Tsuru : SEQ:527 MRG-A without NT
+# Jul/29/2003 ' ver 2.8B    SEQ:526 MRL 1:14h00m,2:14h00m,3:27h30m,4:27h30m
+# Jul/23/2003 : ver 2.80    formal version of 2.7D
+# Jul/14/2003 : ver 2.7D    PFcode 6414 by EC:5558 support; 234zu
+#                           SEQ:525 MRL 1:16h10m,2:21h40m,3:27h20m,4:32h50m
+# Jun/10/2003 : ver 2.70    formal version of 26G
+# May/28/2003 : ver 2.6G    SEQ:522 NT 30min/head for MRG1,2
+#                           NT 45min/head for MRG3,4.HT is decreased bby increased time.
+# May/22/2003 : ver 2.6E    pcpgm 234y,SEQ:520,NT +25min/head
+#                           1:10h25m,2:18h50m,3:29h15m,4:36h40m
+# May/16/2003 : ver 2.6C    Seq:518 MRL 1:16h10m 2:21h40m 3:27h20m 4:32h50m
+# May/15/2003 : ver 2.6B    off track write screening : 6510 support
+# May/06/2003 : ver 2.60    pick up SEQ 515 :HP 20 hours (old 23f:4/18)
+# Apr/25/2003 : ver 2.3F    ram 117d only for MRL : fix address
+# Apr/15/2003 : ver 2.3E    pcpgm 234v ; ram ;117c using only 8m for tpiinfo
+# Apr/14/2003 : ver 2.41    ram 1173 : fix many godl of 240 by ramnew.lnk
+# Apr/08/2003 : ver 2.40    formal of 23B ,rawdata invention,pmlog off of Scip
+# Mar/31/2003 : ver 2.3B    ram 117 for MRG only: support TPI info report
+# Mar/27/2003 : ver 2.3A    ram 116 for MRL only.seq 514 MRL normal temp test 20 min / head
+# MAr/24/2003 : ver 2.30    formal version of UR25022K
+# Mar/18/2003 : ver 2.2K    pick up pcpgm1.75 from ur25018c as vvm.pac for normalsrst
+# Mar/05/2003 : ver 2.2J    seq 513:CLP2:12.5 ,CLP4:18.5
+# Feb/27/2003 : ver 2.2H    address of LP uses one of HP,seq 512:LP time change
+# Feb/17/2003 : ver 2.2G    immediate 6100,room temp time out:6110,seq:511
+#                           pcpgm 234q,ram 115,adjusting testtime,MRLseq separated
+# Jan/29/2003 : ver 2.2D    room temp support plan time + 20min/head
+# Jan/27/2003 : ver 2.2B    turbo mode support,fix GODL->6100, ram 113
+# Jan/21/2003 : ver 2.2A    6110 support ;pcpgm 234N
+# Jan/17/2003 : ver 2.20    +2hours / head seq:508
+# Jan/09/2003 : ver 2.10    fix no response of PC by pcpgm:234L
+# Jan/09/2003 : ver 2.00    6350 support pvpgm 234K,ram 111 for mrg,mrl
+# Jan/06/2003 : ver 1.90    test time +45 min/head seq 507
+# Dec/19/2002 : ver 1.8X    pcpgm 234J(no beep,no displayupdate),cont 295(joint fix)
+# Dec/05/2002 : ver 1.8W    ram 109 for mrg1461 of function
+# Dec/03/2002 ; ver 1.8T    ram 110,test time change,seq506
+# Dec/03/2002 ; ver 1.8S    pcpgm234F,CONT294(support joint,odd order of packet)
+# Nov/14/2002 ; ver 1.8R    2.5 bufferID support ,ram 109,pcpfm234B
+# Nov/08/2002 ; ver 1.8Q    MRL support(badhead support) pcpgm234
+# Nov/08/2002 ; ver 1.8P    MRL support
+# Oct/22/2002 ; ver 1.8N     ram 108,CV7_0291,PCPGM234
+# Oct/11/2002 ; ver 1.8M     ram 107,seq505
+# Oct/09/2002 ; ver 1.8K     ram 106,seq503
+# SEP/24/2002 ; ver 1.8J     PCPGM2.2B ;ram 103
+# SEP/19/2002 ; ver 1.8H     MRG without UART
+# SEP/19/2002 ; ver 1.8G     MRG1234 48hours
+#                            mrg 1,3 support with model.tbl
+# AUG/19/2002 ; ver 1.8D     ramcode change.  mobile102
+#                               hddstatuserrorcode,fix skip hang ,etc
+#                            sequence change. v7__0503
+#                               support 6100 log report
+#
+# Aug/06/2002 ; ver. 1.8A  : MORAGA initial support
+#                            SEQ 500 -> 501
+#                            SEQ 35 -> MRG2
+#                            SEQ 36 -> MRG4
+#                            ramcode for moraga MRG_0101
+#                            pcprogram 2.24 ,separating screen into 3
+#
+# Jun/24/2002 : ver. 1.80  : SEQ 499 -> 500
+#                            SEQ# 27 18 ->  15.5
+#                            SEQ# 28 16 ->  13.5
+# MAY/24/2002 : ver. 1.71  : CV7_028A -> CV7_028B
+#                            CONTV7 -> CONTv7 by CONFIG message
+#                            PC program supports CONTv7 as CONT version V7
+# MAY/23/2002 : Ver. 1.70  : Support CONTV7 to protect V7-SRST & V7-UART-SRST Mixed Operations
+#                            Replase ramcode.ram pc101@taka2000/backup/UART104.tar.gz to support Normal-SRST.
+#                            Replase V7__0288.SUM CV7_028A.SUM to support CONTV7 in CONFIG Message.
+#                            PC program changes to 2.19.
+#                               CONT type V7 support
+#                               fix appear "COMP" after test with normal test.
+# APR/24/2002 : Ver. 1.51  : To support UARTCHK, Update EFTS code.
+#                            Add V7__0288.SUM
+#                            Delete V7__287.SUM
+#                            Add V7__0498.asc
+#                            Delete V7__0490.asc
+#                            Add ramcode.ram from pc101@taka2000/backup/UART096.tar.gz
+#                            Replace ramcode.chk to pc101@taka2000/backup/UART097.tar.gz
+#                            Modify stmodel.v7 model.tbl to support UATCHK
+#                            Add CHKUART.SEQ
+# APR/01/2002 : Ver. 1.50  : Add V7__0287.SUM
+#                            Delete V7__283.SUM
+#                            replace ramcode.ram from pc101@taka2000/backup/UART089.tar.gz to support P/F LED Blinking.
+# APR/01/2002 : Ver. 1.50A : model.pac from SR250150
+#                            vvm.pac from URT80295
+#                            st.pac from SR250150
+#                            Add ramcode.ram from pc101@taka2000/backup/UART088.tar.gz
+#                            Add V7__0283.SUM
+
+
+
+
+
+

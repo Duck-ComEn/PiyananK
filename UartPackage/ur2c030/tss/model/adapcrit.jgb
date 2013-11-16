@@ -1,0 +1,8 @@
+# format
+# MFGID.parameter:value
+VNC??????.StartTime:100
+VNC???.Inputratio:100
+VNC???.Completionratio:100
+VNC???.Yield:100
+
+ 
