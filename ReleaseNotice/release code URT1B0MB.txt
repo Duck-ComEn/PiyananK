@@ -1,0 +1,45 @@
+           Test Ver URT1B0MB for 2step test Release Notice for J1B product
+           ------------------------------------------------------
+                                                                               HDD test Eng.
+                                                                               Piyanan K. 
+                                                                               Nov/15/2013
+         1. Test Version
+
+            Test Process       : SRST/SELF FINAL
+                                 
+            New version        : URT1B0MB(Manual Tester)
+
+         2. Expected BIP Date  : Nov/15/2013
+
+         3. Affected Model     : 2.5" J1B  (2step test)
+
+         4. Affected Tester    : (UART) "V7" or "Triton Mobile" (Manual Tester) 
+                                  or "Triton Desktop SRST" (Manual Tester)
+
+         5. Micro Level        : J1B  <TDK-HD>/ <SJ-HD>
+                                 [SATA]  
+
+         6. Change Items       : Optimize HT target same as  NT
+													
+         7. Test time
+             NA             
+             
+         8. Adaptive SRST time  : 
+             NA
+
+         9. Tester/Test Code Combination
+             NA
+
+        10. Test Code combination after BIP
+             NA
+
+        11. File information
+         
+              Server PC  D:\release\ltsst\external\URT1B0MB
+
+               File name        Size      Date
+               --------------  --------  ---------
+               TSS.ZIP         922909     11-14-13
+
+----
+END OF FILE
