@@ -1,0 +1,26 @@
+Version.ST:UMN1BH0
+# Sep/11/2013  ver , 1BH0  ekk  Rename to formal code
+# Aug/22/2013  ver , 1BF5  tep  Pickup new testcase for GOD5/GOD9 reduction.
+# Jul/23/2013  ver , 1BF0  chg  Add EC6315
+# Jul/10/2013  ver , 1BE0  ekk  Rename to formal code
+# May/05/2013  ver , 1BD0C Cha  Add new error code EC8905,EC8926
+# Apr/03/2013  ver , 1BD0  tep  Support new STD ID TWxxxx.
+# Feb/27/2013  ver , 1BC0  tep  Support new STDID TPxxxx , TRxxxx.
+# Jan/23/2013  ver , 1BB0  tep  New binary code and add EC7244.
+# Jan/07/2013  ver , 1BA0  tep  Support STD ID TNxxxx.
+# Dec/20/2012  ver , 1B90  tep  Add new STD ID TMxxxx,TNxxxx.
+# Dec/10/2012  ver , 1B80  tep  Rename to formal code.
+# Dec/06/2012  ver , 1B70B tep  Add new STD ID TLxxxx
+# Nov/30/2012  ver , 1B70A ekk  Add EC8660, EC876B, EC87C7
+# Nov/21/2012  ver , 1B60  ekk  Rename to formal
+# Nov/16/2012  ver , 1B50A tep  Add new error code EC880B,EC880E.
+# Oct/30/2012  ver , 1B50  tep  Add EC6305/6310/6810/6B10/6B20.
+# Oct/15/2012  ver , 1B40  ekk  Pickup binary code to formal code.
+# Sep/10/2012  ver , 1B30  tep  Add EC875A,EC876A.
+#                               Rename to formal code.
+# Jul/19/2012  ver , 1B25  chg  add EC87C6
+# Jul/04/2012  ver , 1B20  ekk  Pickup binary code to formal code.
+# may/15/2012  ver , 1b15  tep  chang switchingtable and add EC8089
+# Apr/06/2012  ver , 1B10  chg  Add new EC6580,658A,658F
+# Feb/01/2012  ver , 1B00  ekk  Force error code 6110 to 6100
+
