@@ -1,0 +1,69 @@
+EFTS code updating procedure  (V3eftscode V132 later)
+2000/07/7
+
+The code related EFTS is included in \!lts\!system\!st directory after the package is extracted.
+
+Please type the command below in \!lts\!system\!st directory.
+java Eftsupg2 
+
+Then you can see the messages as below,
+>EFTSUPG Version 1.1   2000/6/4
+>
+>EFTS & sequence update menu
+>1: sequence update
+>2: EFTS update
+>3: Destination address:192.0.0.241
+>4: Destination address:192.0.0.242
+>Your choice? -->
+
+At first,please select the tester by 3,4.
+After that,please select sequence update or EFTS update.
+After selection the program updates automatically,then  push reset reset button of tester.
+If you need update both of EFTS and sequence code,you must do this command two times.
+one is for EFTS,another is for sequence.
+
+But the version of EFTS is lower than 132,This feature is not supported.
+Please update manually as usual.(eftsupg V3EF0132.SUM 192.0.0.24x)
+The update procedure by manual is as follows.
+
+One code is EFTS program code and another is sequence code.
+Updating EFTScode has 2 steps.
+Don't forget to update EFTS with sequence file(V3BPxxx.asc).
+
+0 if EFTS version of package is same as one of tester,
+  you can go to step 5.
+1 type "eftsupg xxxxx.sum" in os/2 window.
+        ("xxx.sum" is eftscode. )
+2 select '0'(normal upgrade) and push return.
+3 when tester buzz, push reset button on tester.
+4 you can see a version of rom code at panel on tester,
+  and check EFTS rom version.
+5 next, type "eftsupg xxxx.asc" in os/2 window.
+6 select '0'(normal upgrade) and push return.
+7 when tester buzz, updating is complete.you need not reset tester.
+        but reset don't have a bad influence.
+8 After resetting tester,you can see a version of sequence after EFTS rom version at panel,
+        and check a version.
+    for example:a sequence of 01 16 92 17 is represent for
+        efts version 1.16,sequence version 21.7
+
+
+How to check EFTS & sequence version
+
+1 you can check a version of EFTS & sequence at panel when tester is reset.
+   for example:a sequence of 01 16 92 17 is represent for
+        efts version 1.16,sequence version 21.7
+2 or you can check version via telnet.
+        a: "telnet 192.0.0.241"(case of tester1)in os/2 window.
+        b: type "VERGET" with uppercase,and you can see both of EFTS & sequence
+          as follows.
+           VERGET: "EFTSCODE ver. table" : "sequence ver."
+        for example (VERGET:116 table: 217) represent for
+                eftscode ver. 1.16 and table ver. 21.7
+
+
+If you have a question, please ask me freely.
+                		 Y.Shimofuji
+
+
+!

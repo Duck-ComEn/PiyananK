@@ -1,0 +1,386 @@
+#***********************************************************************************************************************
+# Rev  |  Date  | modified by     | comment
+#***********************************************************************************************************************
+# 0050 | 130920 | Piyanan.K       | [ADD] ??????:0x0ffff:0x06B05:6B05:    RB SER screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0049 | 130731 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x08904:8904:    SONY-DVR THPUT screening failure 
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0048 | 130719 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x06315:6315:    Too many defect from Flake pit Type 
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0047 | 130515 | Chaichana P.    | [ADD] ??????:0x0ffff:0x08905:8905:    SONY-SSC THPUT screening failure
+#      |        |                 | [ADD] ??????:0x0ffff:0x08926:8926:    SONY-SSC AV Scan screening failure
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0046 | 130123 | Teppayut.L      | [ADD] ??????:0x0ffff:0x07244:7244:    Low RMR screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0045 | 121130 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x087C7:87C7:    Head Instability screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x08660:8660:    Load/Unload Screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x0876B:876B:    Delta SER and Poor SER screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0044 | 121116 | Teppayut.L      | [ADD] ??????:0x0ffff:0x0880B:880B:    Pack read hard error
+#      |        |                 | [ADD] ??????:0x0ffff:0x0880E:880E:    Pack read soft error
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0043 | 121030 | Teppayut.L      | [ADD] ??????:0x0ffff:0x06305:6305:    Too many defect from APB type
+#      |        |                 | [ADD] ??????:0x0ffff:0x0875A:875A:    Apple Poor SER @ Final test
+#      |        |                 | [ADD] ??????:0x0ffff:0x0876A:876A:    Apple Func - Fin delta SER
+#      |        |                 | [ADD] ??????:0x0ffff:0x06310:6310:    Spiral Defect Screening      (Move from Final)
+#      |        |                 | [ADD] ??????:0x0ffff:0x06810:6810:    ERP distribution screening   (Move from Final)
+#      |        |                 | [ADD] ??????:0x0ffff:0x06B10:6B10:    HT Poor SER Screening        (Move from Final)
+#      |        |                 | [ADD] ??????:0x0ffff:0x06B20:6B20:    SER variation@SRST           (Move from Final)
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0042 | 120712 | Teppayut.L      | [ADD] ??????:0x0ffff:0x087C6:87C6:    HT Poor SER & SER Variation Stdev screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0040 | 120411 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x08809:8809:    Final PDM update fail
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003S | 120402 | Chidchai        | [ADD] ??????:0x0ffff:0x06580:6580:    Pole erasure Failed by number of error over criteria
+#      |        |                 | [ADD] ??????:0x0ffff:0x0658A:658A:    Cylinder ALS Zone was short
+#      |        |                 | [ADD] ??????:0x0ffff:0x0658F:658F:    CMD fail / CMD time out
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003R | 120315 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x06324:6324:    To many defect from RRO type
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003Q | 120302 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x08298:8298:    Final TDP delta Fail larger DAC
+#      |        |                 | [ADD] ??????:0x0ffff:0x08299:8299:    Final TDP Delta Fail Smaller DAC
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003P | 120207 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x07720:7720:    Spiral Defect Screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x07005:7005:    HT Poor SER Screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x08914:8914:    Read Throughput Screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x0760A:760A:    ID RRO Screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003N | 120201 | Ekkarach.C      | [CHG] ??????:0x0ffff:0x20002:6100:    Force to 6100
+#      |        |                 | [CHG] ??????:0x0ffff:0x20004:6100:    Force to 6100
+#      |        |                 | [CHG] ??????:0x0ffff:0x40000:6100:    Force to 6100
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003M | 120120 | Ekkarach.C      | [ADD] ??????:0x0ffff:0x088B7:88B7:    Butterfly write screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x088B1:88B1:    Butterfly write screening write fail
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003L | 111130 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x00012:8350:    MFG command fail
+#      |        |                 | [CHANGE] ??????:0x0ffff:0x08104:8504:    Seek time screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x08200:8200:    DSSM count screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x07240:7240:    ERP distribution screening @SRST
+#      |        |                 | [ADD] ??????:0x0ffff:0x07230:7230:    SER variation@SRST
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003K | 111031 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x087D1:87D1:    ATI pole eraser fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D2:87D2:    Adjacent track interference screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D3:87D3:    Pole erasure + ATI screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D4:87D4:    FTI fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D5:87D5:    Pole erasure + FTI screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D6:87D6:    FTI + ATI
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D7:87D7:    Pole erasure + ATI + FTI screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x087D8:87D8:    ATI test check fail (ATI write fail)
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003J | 111031 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x07334:7334:    Head Instability(Base Line Shift Type) Screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003I | 111024 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x06384:6384:    Spiral scratch& Tool damage screening fail
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003H | 111011 | Y.Kajihara      | [CHANGE] ??????:0xfffff:0x20004:6110: GOD3 rescue
+#      |        |                 | [CHANGE] ??????:0xfffff:0x20002:6110: 6110 for desktop
+#      |        |                 | [CHANGE] ??????:0xfffff:0x40000:6110: test time is not enough
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003G | 110930 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x06A00:6A00:    Channel module screening fail
+#      |        |                 | [ADD] ??????:0x0ffff:0x06B04:6B04:    SRST HT Poor SER Screening (EC6B04)
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0022 | 110419 | Y.Kajihara      | [CHANGE] ??????:0xfffff:0x20004:6100: GOD3 rescue
+#      |        |                 | [CHANGE] ??????:0xfffff:0x20002:6100: 6110 for desktop
+#      |        |                 | [CHANGE] ??????:0xfffff:0x40000:6100: test time is not enough
+#      |        |                 | [ADD] ??????:0x0ffff:0x08934:8934:    ERP distribution screening
+#      |        |                 | [ADD] ??????:0x0fff0:0x0F7C0:87C0:    Head instability screening
+#      |        |                 | [ADD] ??????:0x0fff0:0x0E7C0:87C4:    Poor SER/ATI margine screening
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 003D | 110309 | T.Oomine        | [CHANGE] ??????:0xfffff:0x80002:GODR: 5910 -> GODR -> 5910 (final)
+#      |        |                 | [CHANGE] ??????:0x0ffff:0x00031:GODR:  5715 ->GODR -> 5715  AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Highger than HT)
+#      |        |                 | [CHANGE] ??????:0x0ffff:0x00032:GODR:  5715 ->GODR -> 5715  AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Lower   than LT)
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0021 | 110215 | T.Oomine        | [ADD] ??????:0x0ffff:0x08270:8270:  Instability FH screening (for EC7)
+#      |        |                 |
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0020 | 110209 | Y.Kajihara      | [ADD] ??????:0x0ffff:0x08914:8914:  Read performance screening
+#      |        |                 | [ADD] ??????:0x0ffff:0x07100:7100:  Spiral defect screening
+#      |        |                 | [CHANGE] ??????:0xfffff:0x40000:6110: test time is not enough
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0019 | 101022 | Y.Kajihara      | [CHANGE] ??????:0x0ffff:0x00031:5710:   AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Highger than HT)
+#      |        |                 | [CHANGE] ??????:0x0ffff:0x00032:5710:   AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Lower   than LT)
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0018 | 100517 | Y.Kajihara      | [CHANGE] ??????:0xfffff:0x20002:6100: 6110 for desktop
+#      |        |                 | [CHANGE] ??????:0xfffff:0x40000:6100: test time is not enough
+#      |        |                 | [CHANGE] ??????:0x0ffff:0x00031:6100:
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0017 | 100517 | Y.Kajihara      | [CHANGE] ??????:0xfffff:0x20004:GODB: GOD3 rescue [6116 -> GODB]
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0016 | 090925 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x00103:6400:    ALT complement temporay buffer overflow
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0015 | 090708 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x0003F:6010:    High temp wait time out"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05018:6503:    WWS seek fail"
+#      |        |                 | [ADD] "??????:0x0ffff:0x07002:6455:    APB initialize fail"
+#      |        |                 | [ADD] "??????:0x0ffff:0x09004:6780:    AEQ command fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0014 | 090623 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x05004:6554:    Adjacent Track Interferance
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0013 | 090410 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x05014:6580:    ATI pole eraser fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0012 | 080619 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x00510:6850:    Load unLoad fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0011 | 080508 | Y.Enomoto       | [CHANGE] "??????:0xfffff:0x60003:6015: no drive detected GOD5 -> 6015"
+#      |        |                 | [CHANGE] "??????:0xfffff:0x60004:6014: POWER card fail GOD1(PFV),GOD3(Other) -> 6014 "
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0010 | 080423 | M.Kurokawa      | [ADD] "??????:0xf000f:0x50001:GOD5: no drive detected"
+#      |        |                 | [ADD] "??????:0xf00f0:0x30010:GOD1: POWER card fail"
+#      |        |                 | [ADD] "GT????:0x0ffff:0x03002:6901:    Write Error at Final Write for KRR/Gemini-K"
+#      |        |                 | [ADD] "??????:0x0ffff:0x03002:8806:    any error at final W/R"
+#      |        |                 | [ADD] "GT????:0x0ffff:0x03003:6902:    Read Error at Final Read for KRR/Gemini-K"
+#      |        |                 | [ADD] "??????:0x0ffff:0x03003:8806:    any error at final W/R"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05550:6444:    Alt cyl immediate fail by head at fill data"
+#      |        |                 | [ADD] "??????:0x0ffff:0x03403:7614:    Torsion Screening"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05021:6506:    WWS"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05550:6444:    Alt cyl immediate fail by head at fill data"
+#      |        |                 | [ADD] "??????:0x0ffff:0x0EEEE:8130:    LED(Limited Educatio Drive) fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0009 | 080307 | T.Fujita        | [ADD] "??????:0x0ffff:0x0E100:8A50:    DRAM(Dummy Read) fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0008 | 071111 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x09012:6730:    RRO Learning Fail"
+#      |        |                 | [ADD] "??????:0x0ffff:0x0E501:6375:    SRST write error with write fault CMD1,3,A,F(Single-head && Multi-error)  "
+#      |        |                 | [ADD] "??????:0x0ffff:0x0E502:6376:    SRST write error with write fault CMD1,3,A,F(Single-head && Single-error)  "
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0007 | 070717 | K.Fujimoto      | [ADD] "GT????:0x0ff00:0x09100:6130:    Assign for Investigation for GMK"
+#      |        |                 | [ADD] "??????:0x0ffff:0x0E500:6374:    SRST write error with write fault CMD1,3,A,F"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0006 | 070425 | K.Fujimoto      | [ADD] "??????:0xfffff:0x20004:6116: GOD3 rescue"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05016:6561:    SER Measurement Write fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0005 | 070125 | K.Fujimoto      | [ADD] "??????:0xfffff:0x0EEEC:6EE9: remodeling for GMK(w/ E2PROM Set)"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0004 | 061220 | K.Fujimoto      | [ADD] "??????:0xfffff:0x0EEED:GODL: remodeling for GMK"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0003 | 061016 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x09001:6130:    TAP equalization fail"
+#      |        |                 | [ADD] "??????:0x0ffff:0x09002:6130:    Un-recovered seek error in TAP equalization"
+#      |        |                 | [ADD] "??????:0x0ffff:0x09003:6130:    Un-recovered write error in TAP equalization"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0002 | 060928 | K.Fujimoto      | [ADD] "??????:0x0ffff:0x00401:6314:    Short & Deep scratch check fail"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05003:6551:    ATI test check fail (ATI write fail)"
+#      |        |                 | [ADD] "??????:0x0ffff:0x05013:6555:    ATI read check fail"
+#------+--------+-----------------+-------------------------------------------------------------------------------------
+# 0001 | 060921 | K.Fujimoto      | 1st release
+#***********************************************************************************************************************
+??????:0xfffff:0x00000:0000: PASS         <0007>
+??????:0xf0000:0x70000:GOD7: 2nd time SRST
+??????:0xfffff:0x68180:8180: Couldn't find Grading ID
+??????:0xfffff:0x68181:GODF: Fatal : no response against requesting switching table
+??????:0xfffff:0x68182:GODF: Fatal : Failed to write Grading STDID to drive
+??????:0xfffff:0x68183:8180: Detect "PEND" as Signature
+??????:0xfffff:0x6818F:GODF: Fatal : invalid grading STDID received
+??????:0xfffff:0x60003:6015: no drive detected
+??????:0xfffff:0x60004:6014: POWER card fail
+??????:0xf0000:0x60000:GOD6: cannot finalize rawdata reporting mode
+??????:0xf0000:0x50000:GOD5: cannot get S/N
+??????:0xf0000:0x30000:GOD3: unit reason
+??????:0xfffff:0x20004:6110: GOD3 rescue
+??????:0xfffff:0x80002:5910: 5910 -> GODR -> 5910 (final)
+??????:0xfffff:0x20002:6110: 6110 for desktop
+??????:0xfffff:0x20003:6010:
+??????:0xfffff:0x10001:GOD2: cannot communicate with drive
+??????:0xfffff:0x15001:GODL: remodeling for VNC
+??????:0xfffff:0x15002:GODL: remodeling for VNC
+??????:0xfffff:0x0EEED:GODL: remodeling for GMK
+??????:0xfffff:0x0EEEC:6EE9: remodeling for GMK(w/ E2PROM Set)
+??????:0xfffff:0x40000:6110: test time is not enough
+??????:0xfffff:0x40001:6114: room temp test time is not enough
+??????:0xfffff:0x40002:6100: too bad or over criteria
+??????:0xfffff:0x40003:6104: too bad or over criteria
+??????:0xf0000:0xf0000:GOD8: other <0006>
+??????:0xf0000:0xe0000:GOD8: other <0006>
+??????:0xf0000:0xd0000:GOD8: other <0006>
+??????:0xf0000:0xc0000:GOD8: other <0006>
+??????:0xf0000:0xb0000:GOD8: other <0006>
+??????:0xf0000:0xa0000:GOD8: other <0006>
+??????:0xf0000:0x90000:GOD8: other <0006>
+??????:0xf0000:0x80000:GOD8: other <0006>
+??????:0xf0000:0x40000:GOD8: other <0007>
+??????:0xf0000:0x20000:GOD8: other <0006>
+??????:0xf0000:0x10000:GOD8: other <0006>
+??????:0x0ffff:0x00030:6100:
+??????:0x0ffff:0x00031:5715:  5715 ->GODR -> 5715  AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Highger than HT)
+??????:0x0ffff:0x00032:5715:  5715 ->GODR -> 5715  AE Temp. Criteria Over (Temperature out of criteria NT Limitation, Lower   than LT)
+??????:0x0ffff:0x05710:5710:    AE Invalid value
+??????:0x0ffff:0x0003F:6010:    High temp wait time out
+??????:0x0ffff:0x00040:8300:    VTT format check fail<0007>
+??????:0x0ffff:0x00041:8300:    VTT format check fail<0007>
+??????:0x0ffff:0x00101:6400:    Alt Cyl TBL o/f
+??????:0x0ffff:0x00102:6400:    PES dump count mismatch
+??????:0x0ffff:0x00103:6400:    ALT complement temporay buffer overflow
+??????:0x0ffff:0x00111:6440:    All cyl count/head out of criteria
+??????:0x0ffff:0x00202:6200:    Log Full
+??????:0x0ffff:0x00114:6210:    Complement log over flow
+??????:0x0ffff:0x00115:6220:    Complement read over flow
+??????:0x0ffff:0x00206:6300:    PDM Full
+??????:0x0ffff:0x06324:6324:    To many defect from RRO Type
+??????:0x0ffff:0x00212:6220:    SAT log over flow for defect complement
+??????:0x0ffff:0x00400:6310:    long scrach check fail
+??????:0x0ffff:0x00401:6314:    Short & Deep scratch check fail
+??????:0x0ffff:0x00510:6850:    Load unLoad fail
+??????:0x0ffff:0x03000:8806:    any error at final W/R
+??????:0x0ffff:0x03002:8806:    any error at final W/R
+??????:0x0ffff:0x03003:8806:    any error at final W/R
+??????:0x0ffff:0x0300f:8806:    any error at final W/R
+??????:0x0ffff:0x03001:8912:    Pack read time out
+??????:0x0ffff:0x03005:8895:    Write Error @ POST Final
+??????:0x0ffff:0x03006:8896:    Read Error @ POST Final
+??????:0x0ffff:0x03012:8921:    Write ERP sum over criteria(AV scan)
+??????:0x0ffff:0x03013:8922:    Read ERP sum over criteria(AV scan)
+??????:0x0ffff:0x03100:8900:    out of criteria : Throughput
+??????:0x0ffff:0x08904:8904:    SONY-DVR THPUT screening failure
+??????:0x0ffff:0x08905:8905:    SONY-SSC THPUT screening failure
+??????:0x0ffff:0x08926:8926:    SONY-SSC AV Scan screening failure
+??????:0x0ffff:0x03101:890F:    command fail @ throughput measurement
+??????:0x0ffff:0x03124:8902:    throghput out of criteria Read
+??????:0x0ffff:0x03134:8901:    throghput out of criteria Write
+??????:0x0ffff:0x03200:8550:    command fail @ adaptive skew
+??????:0x0ffff:0x03201:8550:    no margin of adaptive skew
+??????:0x0ffff:0x03400:7610:    Torsion Screening
+??????:0x0ffff:0x03401:7610:    Torsion Screening
+??????:0x0ffff:0x03403:7614:    Torsion Screening
+??????:0x0ffff:0x05000:6505:    WWS test cyl search fail
+??????:0x0ffff:0x05001:6500:    WWS check fail (head squeeze)
+??????:0x0ffff:0x05002:6550:    Adjacent Track Interferance
+??????:0x0ffff:0x05003:6551:    ATI test check fail (ATI write fail)
+??????:0x0ffff:0x05004:6554:    Adjacent Track Interferance
+??????:0x0ffff:0x05005:6551:    ATI write fail <0005>
+??????:0x0ffff:0x05006:6560:    FTI fail
+??????:0x0ffff:0x05007:6555:    FTI + ATI
+??????:0x0ffff:0x05013:6555:    ATI read check fail
+??????:0x0ffff:0x05014:6580:    ATI pole eraser fail
+??????:0x0ffff:0x05015:6501:    Adjacent Track Interferance
+??????:0x0ffff:0x05016:6561:    SER Measurement Write fail
+??????:0x0ffff:0x05018:6503:    WWS seek fail
+??????:0x0ffff:0x05021:6506:    WWS
+??????:0x0ffff:0x05100:6580:    Pole eraser screening fail
+??????:0x0ffff:0x05101:7500:    WWS SER fail
+??????:0x0ffff:0x05102:6584:    Pole erasure + ATI screening fail
+??????:0x0ffff:0x05106:6586:    Pole erasure + FTI screening fail
+??????:0x0ffff:0x05107:6585:    Pole erasure + ATI + FTI screening fail
+??????:0x0ffff:0x05550:6444:    Alt cyl immediate fail by head at fill data
+??????:0x0ffff:0x05555:6410:    40 Continuous Alt cylinder
+??????:0x0ffff:0x05557:6430:    Alternate cylinder density check fail [fill data]
+??????:0x0ffff:0x05558:6414:    continuous alt cyl @ SAT
+??????:0x0ffff:0x06100:5360:    POR BEEP fail
+??????:0xfffff:0x06200:6A00:    PFD channel screening
+??????:0x0ffff:0x06305:6305:    Too many defect from APB type
+??????:0x0ffff:0x06310:6310:    Spiral Defect Screening      (Move from Final)
+??????:0x0ffff:0x06315:6315:    Too many defect from Flake pit Type 
+??????:0x0ffff:0x06810:6810:    ERP distribution screening   (Move from Final)
+??????:0x0ffff:0x06B10:6B10:    HT Poor SER Screening        (Move from Final)
+??????:0x0ffff:0x06B20:6B20:    SER variation@SRST           (Move from Final)
+??????:0x0ffff:0x07002:6455:    APB initialize fail
+??????:0x0ffff:0x07244:7244:    Low RMR screening
+??????:0x0ffff:0x08000:6600:    Compare Error - Double Servo Screen
+??????:0x0ffff:0x08001:6610:    Unrecovered error - Double Servo Screen
+??????:0x0ffff:0x08002:6600:    Seek Error
+??????:0x0ffff:0x08003:6610:    Unrec Seek error in Double Servo Screen
+??????:0x0ffff:0x08004:6600:    Cannot find Trk 0 - Double Servo Screen
+??????:0x0ffff:0x08100:8504:    FullStroke out of criteria
+??????:0x0ffff:0x08110:8504:    RandomStroke out of criteria
+??????:0x0ffff:0x08210:8504:    RandomStroke out of criteria quiet
+??????:0x0ffff:0x08210:8504:    RandomStroke out of criteria quiet
+??????:0x0ffff:0x0880B:880B:    Pack read hard error
+??????:0x0ffff:0x0880E:880E:    Pack read soft error
+??????:0x0ffff:0x0AAAA:8503:    Seek Time measurement seek command fail
+??????:0x0ffff:0x09001:6130:    TAP equalization fail
+??????:0x0ffff:0x09002:6130:    Un-recovered seek error in TAP equalization
+??????:0x0ffff:0x09003:6130:    Un-recovered write error in TAP equalization
+??????:0x0ffff:0x09004:6780:    AEQ command fail
+??????:0x0ffff:0x09012:6730:    RRO Learning Fail
+??????:0x0ffff:0x09100:8710:    OW out of criteria
+??????:0x0ff00:0x09100:871F:    OW command fail
+??????:0x0ffff:0x0B080:7500:    WWS SER
+??????:0x0ffff:0x087C6:87C6:    HT Poor SER & SER Variation Stdev screening
+??????:0x0f800:0x0B800:8765:    SER Delta(vb changed) <0010>
+??????:0x0f400:0x0B400:8750:    Poor SER (vb changed) <0010>
+??????:0x0f040:0x0B040:8760:    fun-fin SER delta over criteria <0010>
+??????:0x0f200:0x0B200:8704:    fun-fin Head amp delta over criteria <0005>
+??????:0x0f100:0x0B100:8744:    fun-fin Asymmetry delta over criteria <0005>
+??????:0x0ffff:0x0C000:88A0:    SMART status check fail
+??????:0x0ffff:0x0D010:7020:    #DON'T CHANGE ORDER1# CMD2:SAT read
+??????:0x0ffff:0x0D020:7015:    #DON'T CHANGE ORDER2# CMD4:R/W Read
+??????:0x0ffff:0x0D080:7017:    #DON'T CHANGE ORDER3# CMD3:W/W Write
+??????:0x0ffff:0x0D040:7420:    #DON'T CHANGE ORDER4# CMD10:SAT Alycyl
+??????:0x0ffff:0x07005:7005:    HT Poor SER Screening
+??????:0x0ffff:0x0D800:7005:    SER Delta (Multi SER at SRST) <0010>
+??????:0x0ffff:0x0D400:7004:    Poor SER (Multi SER at SRST) <0010>
+??????:0x0ffff:0x0D001:8307:    #DON'T CHANGE ORDER6# PDM
+??????:0x0ffff:0x0D002:7430:    #DON'T CHANGE ORDER7# Aly cyl
+??????:0x0ffff:0x0E000:8A40:    DRAM(Pattern generater) fail
+??????:0x0ffff:0x0E100:8A50:    DRAM(Dummy Read) fail
+??????:0x0ffff:0x0E500:6374:    SRST write error with write fault CMD1,3,A,F
+??????:0x0ffff:0x0E501:6375:    SRST write error with write fault CMD1,3,A,F(Single-head && Multi-error)
+??????:0x0ffff:0x0E502:6376:    SRST write error with write fault CMD1,3,A,F(Single-head && Single-error)
+??????:0x0ffff:0x0EEEE:8130:    LED(Limited Educatio Drive) fail
+??????:0x0ffff:0x0ff28:6350:    only for Moblie
+??????:0x0ffff:0x00500:5640:    L/UL Dump Fail EG7 2step
+??????:0x0ffff:0x00501:5360:    BEEP SCR Fail EG7 2step
+??????:0x0ffff:0x03134:8901:    THOUT EG7 2step
+??????:0x0ffff:0x08306:8306:    Final SCR OPAL 2step
+??????:0x0ffff:0x08295:8295:    Final SCR DELTATDP 2step
+??????:0x0ffff:0x08760:8760:    Final SCR Delta SER EG7 2step
+??????:0x0ffff:0x081B0:81B0:    Final SCR POOR W01 EG7 2step
+??????:0x0ffff:0x081B1:81B1:    Final SCR POOR W02 EG7 2step
+??????:0x0ffff:0x08715:8715:    Final SCR POOR W03 EG7 2step
+??????:0x0ffff:0x08020:8020:    Final SCR NRRO EG7 2step
+??????:0x0ffff:0x080A4:80A4:    Final SCR RRO EG7 2step
+??????:0x0ffff:0x08750:8750:    Final SCR POOR SER EG7 2step
+??????:0x0ffff:0x0875A:875A:    Apple Poor SER @ Final test
+??????:0x0ffff:0x0876A:876A:    Apple Func - Fin delta SER
+??????:0x0ffff:0x07017:7017:    Final SCR SRST RW01 2step
+??????:0x0ffff:0x0871A:871A:    Final SCR POORW04 2step
+??????:0x0ffff:0x08310:8310:    Final RDM DETECT 2step
+??????:0x0ffff:0x07730:7730:    Final SCR 4DOT 2step
+??????:0x0ffff:0x08922:8922:    Final SCR AV SCAN 2step
+??????:0x0ffff:0x0700C:700C:    Final SCR SP SER 2step
+??????:0x0ffff:0x08710:8710:    Final SCR SP OW 2step
+??????:0x0ffff:0x08718:8718:    Final SCR OW MCW 2step
+??????:0x0ffff:0x07160:7160:    Final SCR HT TFA 2step
+??????:0x0ffff:0x088A0:88A0:    Final SMART CHK 2step
+??????:0x0ffff:0x0818A:818A:    Generic Fail
+??????:0x0ffff:0x08800:8805:    PackWrite ReadFail
+??????:0x0ffff:0x03105:890F:    Throughput command fail
+??????:0x0ffff:0x08805:8805:    Final soft error occured
+??????:0x0ffff:0x08E15:8E15:    OQA Script#1 soft error occured
+??????:0x0ffff:0x08E25:8E25:    OQA Script#2 soft error occured
+??????:0x0ffff:0x08806:8806:    Final hard error occured
+??????:0x0ffff:0x08809:8809:    Final PFM update fail
+??????:0x0ffff:0x08E16:8E16:    OQA Script#1 hard error occured
+??????:0x0ffff:0x08E26:8E26:    OQA Script#2 hard error occured
+??????:0x0ffff:0x08914:8914:    Read performance screening (Throughput Screening)
+??????:0x0ffff:0x07100:7100:    Spiral defect screening
+??????:0x0ffff:0x08270:8270:    Instability FH screening (for EC7)
+??????:0x0ffff:0x08934:8934:    ERP distribution screening
+??????:0x0fff0:0x0F7C0:87C0:    Head instability screening
+??????:0x0fff0:0x0E7C0:87C4:    Poor SER/ATI margine screening
+??????:0x0ffff:0x06A00:6A00:    Channel module screening fail
+??????:0x0ffff:0x06B04:6B04:    SRST HT Poor SER Screening (EC6B04)
+??????:0x0ffff:0x06B05:6B05:    RB SER screening
+??????:0x0ffff:0x06384:6384:    Spiral scratch& Tool damage screening fail
+??????:0x0ffff:0x07334:7334:    Head Instability(Base Line Shift Type) Screening
+??????:0x0ffff:0x087D1:87D1:    ATI pole eraser fail
+??????:0x0ffff:0x087D2:87D2:    Adjacent track interference screening fail
+??????:0x0ffff:0x087D3:87D3:    Pole erasure + ATI screening fail
+??????:0x0ffff:0x087D4:87D4:    FTI fail
+??????:0x0ffff:0x087D5:87D5:    Pole erasure + FTI screening fail
+??????:0x0ffff:0x087D6:87D6:    FTI + ATI
+??????:0x0ffff:0x087D7:87D7:    Pole erasure + ATI + FTI screening fail
+??????:0x0ffff:0x087D8:87D8:    ATI test check fail (ATI write fail)
+??????:0x0ffff:0x00012:8350:    MFG command fail
+??????:0x0ffff:0x08104:8504:    Seek time screening
+??????:0x0ffff:0x08200:8200:    DSSM count screening
+??????:0x0ffff:0x07240:7240:    ERP distribution screening @SRST
+??????:0x0ffff:0x07230:7230:    SER variation@SRST
+??????:0x0ffff:0x088B1:88B1:    Butterfly write error
+??????:0x0ffff:0x088B7:88B7:    Butterfly write SMART check fail
+??????:0x0ffff:0x07720:7720:    Spiral Defect Screening
+??????:0x0ffff:0x0760A:760A:    ID RRO Screening
+??????:0x0ffff:0x08298:8298:    Final TDP Delta Fail Larger DAC
+??????:0x0ffff:0x08299:8299:    Final TDP Delta Fail Smaller DAC
+??????:0x0ffff:0x06580:6580:    Pole erasure Failed by number of error over criteria
+??????:0x0ffff:0x0658A:658A:    Cylinder ALS Zone was short
+??????:0x0ffff:0x0658F:658F:    CMD fail / CMD time out
+??????:0x0ffff:0x08660:8660:    Load/ Unload time Screening
+??????:0x0ffff:0x0876B:876B:    Delta SER and Poor SER Screening
+??????:0x0ffff:0x087C7:87C7:    Head Instability Screening
+??????:0x0ff00:0x00000:6130:    other error 1
+??????:0x00000:0x00000:6120:    any other error
