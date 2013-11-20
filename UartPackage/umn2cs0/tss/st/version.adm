@@ -1,0 +1,11 @@
+Version.ST:UMN2CS0
+# Nov/06/2013 , ver 2CS0  pik Rename from UMN2C10M to UMN2CS0
+# Oct/17/2013 , ver 2C10M tep Add new error code EC8350.
+# Sep/02/2013 , ver 2C10K pik Add new error code EC871D/88AA/88AF
+# Aug/22/2013 , ver 2C10H pik Add new error code EC8270/8280/8460
+# Aug/20/2013 , ver 2C10G pik Support new standard ID JRxAxx - JRxHxx
+# Aug/19/2013 , ver 2C10F pik Update new switching table j6_wf.txt support multi grade
+# Jul/25/2013 , ver 2C10C pik Support new STDID JRxxxx and embedded new switching table
+# Jul/16/2013 , ver 2C10B piy Support new error code EC6374
+# Jul/11/2013 , ver 2C10A piy Support new error code EC8924, EC8925 and EC871C
+
